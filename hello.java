@@ -2,17 +2,19 @@ import java.util.Scanner;
 
 public class hello{
     public static void main(String[] args){
-
       Scanner sc = new Scanner(System.in);
+      String[] names = new String[5];
 
-      String name1,name2;
-      System.out.print("Enter name of Student :");
-      name1 = sc.nextLine();
-
-      System.out.print("Enter name of Student :");
-      name2 = sc.nextLine();
-
-      System.out.println("Name1 :"+name1+"\n"+"Name2 :"+name2);
+      for(int i=0; i<names.length; i++){
+        System.out.print("Enter name of Student"+(i+1)+":");
+        names[i] = sc.nextLine();
+      }
+      
+      int i=0;
+      while(i<names.length){
+        System.out.println("Name of Student "+(i+1)+" is :"+names[i]);
+        i++;
+      }
       sc.close();
     }
 }
